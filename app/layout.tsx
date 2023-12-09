@@ -16,6 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang='fr'>
+      <head>
+        <link
+          rel='shortcut icon'
+          href='/images/favicon.png'
+          type='image/x-icon'
+        />
+      </head>
       <body className={`${lusitana.className} bg-primary`}>
         {' '}
         <div className='flex h-screen flex-col md:flex-row md:overflow-hidden'>
