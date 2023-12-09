@@ -3,9 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* CSS HSL */
+  --midnight-green: hsla(193, 100%, 10%, 1);
+  --pacific-cyan: hsla(192, 100%, 41%, 1);
+  --aquamarine: hsla(147, 100%, 81%, 1);
+  --persian-green: hsla(171, 63%, 39%, 1);
+  --light-green: hsla(124, 67%, 69%, 1);
+  --black: hsla(0, 0%, 0%, 1);
+  --black-2: hsla(0, 0%, 0%, 1);
+  --eerie-black: hsla(60, 2%, 11%, 1);
+  --feldgrau: hsla(139, 12%, 30%, 1);
+  --forest-green: hsla(140, 82%, 31%, 1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,11 +25,6 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-size: 1.2em;
+  background-color: var(--midnight-green);
 }
