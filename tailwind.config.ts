@@ -16,6 +16,11 @@ const config: Config = {
         button: 'hsla(82, 100%,20%,1)',
         buttonHover: 'hsla(215, 50%, 70%,1)',
       },
+      fontSize: {
+        title1: 'calc(1vw + 1vh + 2vmin)',
+        title2: 'calc(1vw + 1vh + 0.8vmin)',
+        para: 'calc(1vh + 1vmin)',
+      },
     },
   },
   plugins: [],
