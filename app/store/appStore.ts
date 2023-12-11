@@ -1,6 +1,6 @@
 import { create } from "zustand"
 
-interface WeatherIcon {
+type WeatherIcon = {
   icon: string
   setIcon: (icon: string) => void
 }
