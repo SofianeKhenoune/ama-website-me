@@ -5,28 +5,16 @@ import {
 } from "react-icons/io"
 import { IoRainySharp as Rain } from "react-icons/io5"
 import { MdSunny as Sun } from "react-icons/md"
-import {
-  TempData,
-  WeatherData,
-  convertSecondsToHoursMinutes,
-  fetchWeather,
-  getCurrentTimeObject,
-} from "../lib/weather"
+import { convertSecondsToHoursMinutes, fetchWeather } from "../lib/weather"
 
 export default async function Weather() {
-  const data: WeatherData = await fetchWeather()
+  const { current, daily } = await fetchWeather()
+  const { time, temperature2m, isDay, rain, cloudCover } = current
   const {
-    time,
-    temperature,
-    isDay,
-    temMAx,
-    temMin,
-    rain,
-    cloudCover,
-    sunrise,
-    sunset,
+    temperature2mMax: tempMax,
+    temperature2mMin: tempMin,
     daylightDuration,
-  }: TempData = await getCurrentTimeObject(data)
+  } = daily
   const WeatherIcon =
     cloudCover >= 0 && cloudCover <= 20 && isDay
       ? Sun
@@ -45,7 +33,7 @@ export default async function Weather() {
   return (
     <div className="bg-medium text-slate-100 p-3 rounded-lg w-full hidden md:block">
       <div className="flex justify-between mb-4">
-        <p>{`${temperature.toFixed(1)} °C`}</p>
+        <p>{`${temperature2m.toFixed(1)} °C`}</p>
         {WeatherIcon === Sun ? (
           <WeatherIcon
             color="yellow"
@@ -60,17 +48,15 @@ export default async function Weather() {
         )}
       </div>
       <div className="flex justify-between">
-        <p>{`${temMAx.toFixed(1)} °C max`}</p>
-        <p>{`${temMin.toFixed(1)} °C min`}</p>
+        <p>{`${tempMax[0].toFixed(1)} °C max`}</p>
+        <p>{`${tempMin[0].toFixed(1)} °C min`}</p>
       </div>
       <p>Aubervilliers</p>
-      <p>{time}</p>
-      {/* <p>{`Pluie : ${rain.toFixed(1)} mm`}</p> */}
-      {/* <p>{`Nuages : ${cloudCover.toFixed(1)} %`}</p> */}
-      {sunrise && <p>{`Lever du soleil : ${sunrise}`}</p>}
-      {sunset && <p>{`Sunset : ${sunset}`}</p>}
+      <p>{time.toLocaleDateString("fr-FR")}</p>
+      <p className="hidden lg:block">{`Pluie : ${rain.toFixed(1)} mm`}</p>
+      <p className="hidden lg:block">{`Nuages : ${cloudCover.toFixed(1)} %`}</p>
       <p>{`Duree du jour : ${convertSecondsToHoursMinutes(
-        daylightDuration
+        daylightDuration[0]
       )}`}</p>
     </div>
   )

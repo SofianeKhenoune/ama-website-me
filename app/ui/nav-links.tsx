@@ -30,6 +30,16 @@ const links = [
 
 export default function NavLinks() {
   const pathname = usePathname()
+  if (typeof window !== "undefined") {
+    // Client-side-only code
+    navigator.geolocation.getCurrentPosition((position) => {
+      localStorage.setItem(
+        "location",
+        `[${position.coords.latitude},${position.coords.longitude}]`
+      )
+    })
+  }
+
   return (
     <div
       className={
