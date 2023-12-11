@@ -1,6 +1,5 @@
 import NavLinks from "@/app/ui/nav-links"
 import Link from "next/link"
-import Weather from "./weater"
 
 export default function SideNav() {
   return (
@@ -14,7 +13,6 @@ export default function SideNav() {
       ></Link>
       <div className="flex justify-between flex-col md:grow">
         <NavLinks />
-        <Weather />
       </div>
     </div>
   )
