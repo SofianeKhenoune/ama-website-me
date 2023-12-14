@@ -1,10 +1,11 @@
+"use client"
 import NavLinks from "@/app/ui/nav-links"
 import Link from "next/link"
-import Weather from "./weater"
+import { CgCloseO } from "react-icons/cg"
 
 export default function SideNav() {
   return (
-    <div className="flex h-full flex-col px-3 py-4 md:px-3 bg-primary">
+    <div className="sidenav flex h-screen flex-col px-3 py-4 md:px-3 bg-primary justify-between">
       <Link
         className="mb-2 flex h-20 items-end justify-start rounded-md p-4 md:h-40"
         href="/"
@@ -14,8 +15,11 @@ export default function SideNav() {
       ></Link>
       <div className="flex justify-between flex-col md:grow">
         <NavLinks />
-        <Weather />
       </div>
+      <CgCloseO
+        className="self-end md:hidden hover:scale-110 cursor-pointer"
+        size={30}
+      />
     </div>
   )
 }
