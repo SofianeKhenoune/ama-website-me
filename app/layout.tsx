@@ -1,19 +1,17 @@
+"use client"
 import { lusitana } from "@/app/ui/fonts"
-import type { Metadata } from "next"
+import { CgMenuRound } from "react-icons/cg"
 import "./globals.css"
+import useSetMenu from "./store/menuStore"
 import SideNav from "./ui/sidenav"
-
-export const metadata: Metadata = {
-  title: "Association des Musulmans d'Aubervilliers ",
-  description:
-    "Site de l'Association des Musulmans d'Aubervilliers, venez découvrir nos activités",
-}
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const { open, setMenu } = useSetMenu()
+  console.log(open)
   return (
     <html lang="fr">
       <head>
@@ -22,15 +20,26 @@ export default function RootLayout({
           href="/images/favicon.ico"
           type="image/x-icon"
         />
+        <meta
+          name="description"
+          content="Site de l'Association des Musulmans d'Aubervilliers, venez découvrir nos activités"
+        />
+        <title>Association des Musulmans d&apos;Aubervilliers</title>
       </head>
       <body className={`${lusitana.className} text-para`}>
         <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
           <div className="w-full flex-none md:w-64">
             <SideNav />
           </div>
-          <div className="flex-grow p-6 md:overflow-y-auto md:p-12">
-            {children}
-          </div>
+          <div className="flex-grow md:overflow-y-auto">{children}</div>
+          {!open && (
+            <CgMenuRound
+              className="fixed md:hidden hover:scale-110 cursor-pointer bottom-5 right-5 bg-medium rounded-md p-1"
+              size={50}
+              color="white"
+              onClick={() => setMenu()}
+            />
+          )}
         </div>
       </body>
     </html>
