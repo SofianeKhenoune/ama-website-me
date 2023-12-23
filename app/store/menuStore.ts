@@ -7,7 +7,13 @@ interface SetMenu {
 
 const useSetMenu = create<SetMenu>((set) => ({
   open: false,
-  setMenu: () => set((state) => ({ open: !state.open })),
+  setMenu: () =>
+    set((state) => {
+      if (window.innerWidth > 768) {
+        return { open: false } as SetMenu
+      }
+      return { open: !state.open }
+    }),
 }))
 
 export default useSetMenu

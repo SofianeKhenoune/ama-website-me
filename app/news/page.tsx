@@ -14,7 +14,6 @@ export default async function New() {
     "https://jsonplaceholder.typicode.com/posts?_limit=10"
   )
   const data = await posts.json()
-  console.log(data)
 
   return (
     <main>

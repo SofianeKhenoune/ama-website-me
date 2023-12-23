@@ -11,7 +11,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const { open, setMenu } = useSetMenu()
-  console.log(open)
+
   return (
     <html lang="fr">
       <head>

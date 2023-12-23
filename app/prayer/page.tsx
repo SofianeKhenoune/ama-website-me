@@ -1,11 +1,17 @@
+"use client"
+
 import clsx from "clsx"
 import { useState } from "react"
 
-export default function PrayerWidget() {
+export default function Prayer() {
   const [changeMosque, setChangeMosque] = useState(false)
+
   return (
-    <div className="hidden md:block">
-      <div className="flex text-para font-bold">
+    <main className="md:w-[70vw] m-auto p-10">
+      <h1 className={"text-title1 font-bold text-center pb-5"}>
+        Horaires de prières dans nos deux mosquées
+      </h1>
+      <div className="flex text-title2 font-bold">
         <p
           className={clsx(
             "grow p-3 cursor-pointer text-center font-bold rounded-tl-2xl border-t border-l border-dark",
@@ -58,7 +64,29 @@ export default function PrayerWidget() {
             ></iframe>
           </div>
         </div>
+        <div className="hidden xl:block">
+          <div
+            className={clsx("absolute top-0 left-0 right-0", {
+              "z-20": !changeMosque,
+            })}
+          >
+            <iframe
+              src="https://mawaqit.net/en/w/mosquee-de-la-fraternite-aubervilliers?showOnly5PrayerTimes=0"
+              className="mawaqit w-full rounded-b-2xl h-[600px]"
+            />
+          </div>
+          <div
+            className={clsx("absolute top-0 left-0 right-0", {
+              "z-20": changeMosque,
+            })}
+          >
+            <iframe
+              src="https://mawaqit.net/en/w/mosquee-al-ansar-aubervilliers?showOnly5PrayerTimes=0"
+              className="mawaqit w-full rounded-b-2xl h-[600px]"
+            />
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
   )
 }
