@@ -18,12 +18,14 @@ export default async function New() {
   return (
     <main>
       <h1 className={"text-title1 font-bold text-center pb-5"}>Actualités</h1>
-      <section>
+      <section className="flex flex-col">
         {data.length &&
-          data.map((post: Post) => (
+          data.map((post: Post, index: number) => (
             <article
               key={post.id}
-              className="p-3 m-3 flex flex-col rounded-lg bg-primary text-justify shadow shadow-['rgba(0,0,0,0.2)_0px_0px_5px'] "
+              className={`p-3 flex flex-col rounded-lg bg-primary text-justify shadow shadow-['rgba(0,0,0,0.2)_0px_0px_5px'] w-[90%] ${
+                index % 2 === 0 ? "self-baseline" : "self-end"
+              }`}
             >
               <h2 className={"text-title2 font-bold"}>
                 {post.title.replace(/^\w/g, (l) => l.toUpperCase())}
@@ -38,7 +40,7 @@ export default async function New() {
               <Link
                 href={`/post/${post.id}`}
                 type="button"
-                className="self-end border border-light rounded-md px-3 bg-light text-slate-50 font-bold"
+                className="self-end border border-light rounded-md px-3 bg-medium text-slate-50 font-bold"
               >
                 Lire
               </Link>
