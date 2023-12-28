@@ -10,7 +10,7 @@ export default function PrayerWidget() {
           className={clsx(
             "grow p-3 cursor-pointer text-center font-bold rounded-tl-2xl border-t border-l border-dark",
             {
-              "bg-medium text-primary": !changeMosque,
+              "bg-medium text-slate-50": !changeMosque,
             }
           )}
           onClick={() => {
@@ -23,7 +23,7 @@ export default function PrayerWidget() {
           className={clsx(
             "grow p-3 cursor-pointer text-center font-bold rounded-tr-2xl border-t border-r border-dark",
             {
-              "bg-medium text-primary": changeMosque,
+              "bg-medium text-slate-50": changeMosque,
             }
           )}
           onClick={() => {

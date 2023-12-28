@@ -9,7 +9,7 @@ export default function SideNav() {
 
   return (
     <div
-      className={`sidenav h-screen px-3 py-4 md:px-3 bg-sideNavColor fixed w-full flex flex-col md:relative transition-transform duration-500 md:translate-x-0 z-50 md:z-0 ${
+      className={`h-screen px-3 py-4 md:px-3 bg-light fixed w-full flex flex-col md:relative transition-transform duration-500 md:translate-x-0 z-50 md:z-0 ${
         open ? "translate-x-0" : "-translate-x-full"
       }`}
     >

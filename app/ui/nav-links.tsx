@@ -42,9 +42,9 @@ export default function NavLinks() {
             key={link.name}
             href={link.href}
             className={clsx(
-              "flex h-12 grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-para font-medium md:hover:bg-button md:hover:scale-110 transition-transform duration-500 md:flex-none md:justify-start md:p-2 md:px-3 md:rounded-r-full",
+              "flex h-12 grow items-center justify-center gap-2 rounded-md bg-medium p-3 text-para font-medium md:hover:bg-buttonHover md:hover:scale-110 hover:text-slate-50 transition-transform duration-300 md:flex-none md:justify-start md:p-2 md:px-3 md:rounded-r-full",
               {
-                "bg-light text-primary": pathname === link.href,
+                "text-slate-50 !bg-dark": pathname === link.href,
               }
             )}
             onClick={() => setMenu()}

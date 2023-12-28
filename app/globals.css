@@ -4,17 +4,11 @@
 
 :root {
   /* CSS HSL */
-  --midnight-green: hsla(193, 100%, 10%, 1);
-  --pacific-cyan: hsla(192, 100%, 41%, 1);
-  --aquamarine: hsla(147, 100%, 81%, 1);
-  --persian-green: hsla(171, 63%, 39%, 1);
-  --light-green: hsla(124, 67%, 69%, 1);
-  --black: hsla(0, 0%, 0%, 1);
-  --black-2: hsla(0, 0%, 0%, 1);
-  --eerie-black: hsla(60, 2%, 11%, 1);
-  --feldgrau: hsla(139, 12%, 30%, 1);
-  --forest-green: hsla(140, 82%, 31%, 1);
-  --test: hsla(65, 85%, 52%, 1);
+  --light: hsla(193, 20%, 60%, 1);
+  --dark: hsla(199, 26%, 20%, 1);
+  --medium: hsla(192, 24%, 60%, 1);
+  --bg-btn: hsla(188, 76%, 31%, 1);
+  --bg-hover-btn: hsla(209, 19%, 56%, 1);
 }
 
 @media (prefers-color-scheme: dark) {

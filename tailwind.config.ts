@@ -9,13 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        sideNavColor: "hsla(220,32%,90%,0.9)",
-        primary: "hsla(220,32%,90%,1)",
-        light: "hsla(220,32%,40%,1)",
-        dark: "hsla(234, 84%, 10%,1)",
-        medium: "hsla(215, 50%, 15%,1)",
-        button: "hsla(82, 100%,20%,1)",
-        buttonHover: "hsla(215, 50%, 70%,1)",
+        light: "hsla(193, 20%, 80%,1)",
+        dark: "hsla(199, 26%, 20%,1)",
+        medium: "hsla(188, 76%, 31%,0.9)",
+        button: "hsla(192, 24%, 60%,1)",
+        buttonHover: "hsla(209, 19%, 56%,1)",
       },
       fontSize: {
         title1: "calc(1vw + 1vh + 2vmin)",
