@@ -9,18 +9,18 @@ const aboutIconProps: AboutIconsPropsArray = [
   {
     icon: FaPeopleGroup,
     text: "Qui sommes nous !",
-    direction: "r",
+    direction: "rounded-r-full",
   },
   {
     icon: FaHistory,
     text: "Notre histoire",
-    position: "end",
-    direction: "l",
+    position: "self-end",
+    direction: "rounded-l-full",
   },
   {
     icon: AiFillProject,
     text: "Nos activités",
-    direction: "r",
+    direction: "rounded-r-full",
   },
 ]
 const About = () => {

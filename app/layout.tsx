@@ -34,7 +34,7 @@ export default function RootLayout({
           <div className="flex-grow md:overflow-y-auto">{children}</div>
           {!open && (
             <CgMenuRound
-              className="fixed md:hidden hover:scale-110 cursor-pointer bottom-5 right-5 bg-medium rounded-md p-1"
+              className="fixed md:hidden hover:scale-110 cursor-pointer bottom-5 right-5 bg-dark rounded-md p-1"
               size={50}
               color="white"
               onClick={() => setMenu()}

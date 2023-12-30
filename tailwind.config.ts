@@ -16,7 +16,7 @@ const config: Config = {
         buttonHover: "hsla(209, 19%, 56%,1)",
       },
       fontSize: {
-        title1: "calc(1vw + 1vh + 1.2vmin)",
+        title1: "calc(1vw + 1vh + 1vmin)",
         title2: "calc(1vw + 1vh + 0.8vmin)",
         para: "calc(1vh + 1vmin)",
       },

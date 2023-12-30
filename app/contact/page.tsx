@@ -1,9 +1,11 @@
 const Contact = () => {
   return (
-    <main>
-      <h1 className={'text-3xl font-bold text-center pb-5'}>Nous contacter</h1>
+    <main className="min-h-screen flex flex-col overflow-hidden">
+      <h1 className="text-title1 font-bold text-center py-2 px-7 self-end bg-light rounded-bl-xl">
+        Nous contacter
+      </h1>
     </main>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

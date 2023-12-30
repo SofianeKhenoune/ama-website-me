@@ -44,7 +44,9 @@ export default function NavLinks() {
             className={clsx(
               "flex h-12 grow items-center justify-center gap-2 rounded-md bg-light p-3 text-para font-medium md:hover:bg-medium md:hover:scale-110 hover:text-slate-50 transition-transform duration-300 md:flex-none md:justify-start md:p-2 md:px-3 md:rounded-r-full",
               {
-                "text-slate-50 !bg-dark md:scale-110": pathname === link.href,
+                "text-slate-50 !bg-dark md:scale-110":
+                  pathname === link.href ||
+                  (pathname.includes("/post") && link.href === "/news"),
               }
             )}
             onClick={() => setMenu()}
