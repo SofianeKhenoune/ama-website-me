@@ -46,7 +46,7 @@ export default function NavLinks() {
               {
                 "text-slate-50 !bg-dark md:scale-110":
                   pathname === link.href ||
-                  (pathname.includes("/post") && link.href === "/news"),
+                  (link.href !== "/" && pathname?.includes(link.href)),
               }
             )}
             onClick={() => setMenu()}

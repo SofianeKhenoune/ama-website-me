@@ -25,7 +25,7 @@ export default function SideNav() {
         <NavLinks />
       </div>
       <CgCloseO
-        className="fixed md:hidden hover:scale-110 cursor-pointer bottom-5 right-5 bg-medium rounded-md p-1"
+        className="fixed md:hidden hover:scale-110 cursor-pointer bottom-5 right-5 hover:bg-dark bg-medium rounded-md p-1"
         size={50}
         color="white"
         onClick={() => setMenu()}

@@ -16,11 +16,13 @@ export default function Post({
   index: number
 }) {
   return (
-    <article
-      key={post.id}
-      className={`p-3 flex flex-col rounded-lg bg-dark text-slate-50 shadow shadow-['rgba(0,0,0,0.2)_0px_0px_5px'] w-[80%] border border-medium hover:scale-105 hover:bg-medium transition duration-500 ${
-        index % 2 === 0 ? "self-baseline" : "self-end"
+    <Link
+      className={`bloc p-3 flex flex-col rounded-lg bg-dark text-slate-50 shadow-['rgba(0,0,0,0.2)_0px_0px_16px'] w-[80%] border border-medium hover:bg-medium transition duration-500 opacity-0 ${
+        index % 2 === 0
+          ? "self-baseline -translate-x-full"
+          : "self-end translate-x-full"
       }`}
+      href={`/news/post/${post.id}`}
     >
       <h2 className={"text-title2 font-bold"}>
         {post.title.replace(/^\w/g, (l) => l.toUpperCase())}
@@ -32,13 +34,12 @@ export default function Post({
         </p>
       </div>
       <p className="text-justify">{post.body}</p>
-      <Link
-        href={`/post/${post.id}`}
+      <button
         type="button"
         className="self-end border border-light rounded-md px-3 bg-medium text-slate-50 font-bold hover:bg-dark"
       >
         Lire
-      </Link>
-    </article>
+      </button>
+    </Link>
   )
 }

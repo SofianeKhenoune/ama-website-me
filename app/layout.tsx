@@ -12,6 +12,8 @@ export default function RootLayout({
 }) {
   const { open, setMenu } = useSetMenu()
 
+  const newLocal =
+    "fixed md:hidden hover:bg-dark hover:scale-110 cursor-pointer bottom-5 right-5 bg-medium rounded-md p-1"
   return (
     <html lang="fr">
       <head>
@@ -34,7 +36,7 @@ export default function RootLayout({
           <div className="flex-grow md:overflow-y-auto">{children}</div>
           {!open && (
             <CgMenuRound
-              className="fixed md:hidden hover:scale-110 cursor-pointer bottom-5 right-5 bg-dark rounded-md p-1"
+              className={newLocal}
               size={50}
               color="white"
               onClick={() => setMenu()}
