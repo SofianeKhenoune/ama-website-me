@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         light: "hsla(193, 20%, 80%,1)",
         dark: "hsla(199, 26%, 20%,1)",
-        medium: "hsla(188, 76%, 31%,0.9)",
+        medium: "hsla(188, 76%, 31%,1)",
         button: "hsla(192, 24%, 60%,1)",
         buttonHover: "hsla(209, 19%, 56%,1)",
       },

@@ -38,7 +38,7 @@ export default function RootLayout({
             <CgMenuRound
               className={newLocal}
               size={50}
-              color="white"
+              color="#fff"
               onClick={() => setMenu()}
             />
           )}

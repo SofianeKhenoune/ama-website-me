@@ -16,7 +16,7 @@ export function ContactIcon({
   direction,
   index,
 }: ContactIconProps) {
-  const classNames = `about-bloc flex flex-col justify-center items-center gap-2 grow bg-dark p-3 text-slate-50 hover:bg-medium hover:scale-105 transition duration-300 w-[90%] md:w-[70%] opacity-0 ${position} ${direction} ${
+  const classNames = `about-bloc flex flex-col justify-center items-center gap-2 grow bg-dark p-3 text-slate-50 hover:bg-medium transition duration-300 w-[90%] md:w-[70%] opacity-0 ${position} ${direction} hover:scale-105 ${
     index % 2 === 0 ? "translate-x-full" : "-translate-x-full"
   }`
   const Icon = icon

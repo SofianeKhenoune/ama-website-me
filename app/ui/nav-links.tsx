@@ -2,6 +2,7 @@
 import clsx from "clsx"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { FaPrayingHands } from "react-icons/fa"
 import { FaMosque } from "react-icons/fa6"
 import {
   HiHome,
@@ -27,6 +28,7 @@ const links = [
     href: "/prayer",
     icon: FaMosque,
   },
+  { name: "Contribuer", href: "/contribute", icon: FaPrayingHands },
   { name: "Contact", href: "/contact", icon: MdContactMail },
 ]
 

@@ -17,7 +17,7 @@ export default function Post({
 }) {
   return (
     <Link
-      className={`bloc p-3 flex flex-col rounded-lg bg-dark text-slate-50 shadow-['rgba(0,0,0,0.2)_0px_0px_16px'] w-[80%] border border-medium hover:bg-medium transition duration-500 opacity-0 ${
+      className={`bloc p-3 flex flex-col rounded-lg bg-dark text-slate-50 shadow-['rgba(0,0,0,0.2)_0px_0px_16px'] md:w-[80%] border border-medium hover:bg-medium transition duration-500 opacity-0 ${
         index % 2 === 0
           ? "self-baseline -translate-x-full"
           : "self-end translate-x-full"
