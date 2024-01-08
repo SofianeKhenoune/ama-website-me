@@ -8,7 +8,7 @@ export default function Prayer() {
 
   return (
     <main className="flex flex-col h-screen gap-10">
-      <h1 className="text-title1 font-bold text-center py-2 px-7 self-end bg-light rounded-bl-xl">
+      <h1 className="text-title1 font-bold text-center py-2 px-7 bg-light rounded-bl-full rounded-br-full">
         Horaires de prières dans nos deux mosquées
       </h1>
       <div className="prayer-widget w-[90%] mx-auto flex-1 self-center">

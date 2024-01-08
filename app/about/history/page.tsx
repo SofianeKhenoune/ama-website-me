@@ -9,7 +9,7 @@ const History = () => {
     "rounded-tr-xl rounded-br-xl border-medium border-r-8 border-t-8 -mr-2 relative pb-8 px-6"
   return (
     <main className="min-h-screen flex flex-col overflow-hidden">
-      <h1 className="text-title1 font-bold text-center py-2 px-7 self-end bg-light rounded-bl-xl">
+      <h1 className="text-title1 font-bold text-center py-2 px-7 bg-light rounded-bl-full rounded-br-full">
         Notre Histoire
       </h1>
       <section className="flex-1 flex flex-col p-10">

@@ -52,7 +52,7 @@ export default function Contribute() {
   })
   return (
     <main className="min-h-screen flex flex-col overflow-hidden">
-      <h1 className="text-title1 font-bold text-center py-2 px-7 self-end bg-light rounded-bl-xl">
+      <h1 className="text-title1 font-bold text-center py-2 px-7 bg-light rounded-bl-full rounded-br-full">
         Contribuer
       </h1>
       <section className="flex-1 flex flex-col gap-10 text-title1 justify-around py-20 md:py-10 pb-32">
